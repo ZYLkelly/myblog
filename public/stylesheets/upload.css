@@ -1,0 +1,13 @@
+form{
+    width: 30%;
+    margin: 300px auto;
+    border: 1px lightyellow solid;
+    border-radius: 10px;
+}
+
+form input:nth-of-type(2){
+    width: 100px;
+    height: 40px;
+    background: rgb(1,194,194);
+    border-radius: 10px;
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的首页</title>
+    <meta name="keywords" content="个人博客模板,博客模板" />
+    <meta name="description" content="寻梦主题的个人博客模板，优雅、稳重、大气,低调。" />
+    <link rel="stylesheet" href="/plugins/bootstrap/css/bootstrap.min.css">
+    <!--图标-->
+    <link rel="stylesheet" href="/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="/stylesheets/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="<%= locals.resource %>" >
+    <script type="text/javascript" src="/plugins/jquery.min.js"></script>
+    <!--引入bootstrap插件-->
+    <script type="text/javascript" src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!--引入angularJS-->
+    <script type="text/javascript" src="/plugins/angular/angular.min.js"></script>
+    <!--<script src="js/modernizr.js"></script>-->
+    <link rel="stylesheet" href="/plugins/editor/dist/simplemde.min.css">
+    <script type="text/javascript" src="/plugins/editor/dist/simplemde.min.js"></script>
+
+</head>
+
+<body>
+<header>
+
+    <nav class="topnav navbar navbar-default" id="topnav" >
+        <div  id="logo">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <a href="/"><span>首页</span><span class="en">Protal</span></a>
+            <a href="/life"><span>慢生活</span><span class="en">Life</span></a>
+            <a href="/doing"><span>碎言碎语</span><span class="en">Doing</span></a>
+            <a href="/lean"><span>学无止境</span><span class="en">Learn</span></a>
+            <a href="/book"><span>留言版</span><span class="en">Gustbook</span></a>
+            <% if(user){%>
+            <a href="/post"><span>发表</span><span class="en">Post</span></a>
+            <a href="/upload"><span>上传</span><span class="en">Upload</span></a>
+            <a href="/archive"><span>存档</span><span class="en">Archive</span></a>
+            <a href="/logout"><span>退出</span><span class="en">Logout</span></a>
+            <% }else{%>
+            <a href="/login"><span>登录</span><span class="en">Login</span></a>
+            <a href="/reg"><span>注册</span><span class="en">Register</span></a>
+            <% }%>
+            <a href="/about"><span>关于我</span><span class="en">About</span></a>
+        </div>
+    </nav>
+</header>
+<% if(success){%>
+<div><%= success%></div>
+<% }%>
+<% if(error){%>
+<div><%= error%></div>
+<% }%>

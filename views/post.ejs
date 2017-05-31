@@ -1,0 +1,55 @@
+<% include header%>
+<div class="aw-container-wrap">
+    <div class="container aw-publish">
+        <div class="row">
+            <div class="aw-content-wrap clearfix">
+                <div class="col-sm-12 col-md-9 aw-main-content">
+                    <ul class="nav nav-tabs aw-nav-tabs active">
+                        <h2 class="hidden-xs">
+                            <i class="fa fa-credit-card"></i>
+                            发表
+                        </h2>
+                    </ul>
+                    <!--问题的主题-->
+                    <form action="" method="post">
+                        <div class="aw-mod aw-mod-publish">
+                            <div class="mod-body">
+
+                                <h3>文章的标题</h3>
+                                <div class="aw-publish-title">
+                                    <div>
+                                        <input type="text" placeholder="问题标题..." name="title" class="form-control">
+                                        <div class="aw-publish-suggest-question hide">
+                                            <p class="text-color-999">你的问题可能已经有答案了..</p>
+                                            <ul class="aw-dropdown-list"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>文章内容:</h3>
+                                <div class="aw-mod aw-editor-box">
+                                    <div class="mod-head">
+                                        <textarea name="post" id="question"></textarea>
+                                    </div>
+                                    <div class="mod-body">
+                                        <span class="pull-right text-color-999" id="question_detail_message">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mod-footer clearfix">
+                                <input class="btn btn-large btn-success" type="submit" value="确认发起"></input>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var simplemde = new SimpleMDE({
+        element: $("#question")[0] ,
+        status:false,
+        styleSelectedText:false,
+    });
+</script>
+<% include footer%>
